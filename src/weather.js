@@ -5,8 +5,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import { TextField } from "@mui/material";
 import fetch from "node-fetch";
 
+//https://github1s.com/jdretz/rapid-api-react-weather-app-tutorial/blob/HEAD/src/components/Forecast/Forecast.js
+
 export const Weather = () => {
   const [input, setInput] = useState("");
+  const [weather, setWeather] = useState([]);
 
   const change = (e) => {
     setInput(e.target.value);
@@ -17,15 +20,14 @@ export const Weather = () => {
     //const fetch = require(fetch);
     //console.log(input)
 
-    const url =
-      "https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${f779c16518efe397941d12baeb02eb02}";
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${process.env.REACT_APP_API_KEY}`;
     const options = {
       method: "GET",
     };
 
     fetch(url, options)
       .then((res) => res.json())
-      .then((json) => console.log(json))
+      .then((json) => setWeather(json))
       .catch((err) => console.error("error:" + err));
   };
 
@@ -49,6 +51,7 @@ export const Weather = () => {
         >
           Search
         </Button>
+        <p>{weather.main.temp-273.15}</p>
       </div>
     </div>
   );
