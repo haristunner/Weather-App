@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import { TextField } from "@mui/material";
 import fetch from "node-fetch";
+import { Box } from "./box";
 
 //https://github1s.com/jdretz/rapid-api-react-weather-app-tutorial/blob/HEAD/src/components/Forecast/Forecast.js
 
@@ -27,8 +28,11 @@ export const Weather = () => {
 
     fetch(url, options)
       .then((res) => res.json())
-      .then((json) => setWeather(json))
+      .then(response => {
+        setWeather(response);
+    })
       .catch((err) => console.error("error:" + err));
+    setInput("")
   };
 
   const style = { marginTop: "10px" };
@@ -51,8 +55,12 @@ export const Weather = () => {
         >
           Search
         </Button>
-        <p>{weather.main.temp-273.15}</p>
+        
       </div>
+      <div className="box-c">
+          
+          <Box weather={weather} />
+        </div>
     </div>
   );
 };
