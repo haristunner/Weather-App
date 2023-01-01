@@ -1,0 +1,19 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 30vh; */
+  text-align: start;
+  box-shadow: 0px 3px 15px rgb(44, 44, 44);
+  /* margin-top: 150px; */
+  background-color: rgb(128, 190, 202);
+  border-radius: 10px;
+}
+
+.celcius {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: x-large;
+  padding: 30px 20px;
+}

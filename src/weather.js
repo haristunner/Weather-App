@@ -22,17 +22,17 @@ export const Weather = () => {
     //console.log(input)
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${process.env.REACT_APP_API_KEY}`;
+    setInput("");
     const options = {
       method: "GET",
     };
 
     fetch(url, options)
       .then((res) => res.json())
-      .then(response => {
+      .then((response) => {
         setWeather(response);
-    })
+      })
       .catch((err) => console.error("error:" + err));
-    setInput("")
   };
 
   const style = { marginTop: "10px" };
@@ -55,12 +55,10 @@ export const Weather = () => {
         >
           Search
         </Button>
-        
       </div>
       <div className="box-c">
-          
-          <Box weather={weather} />
-        </div>
+        <Box weather={weather} />
+      </div>
     </div>
   );
 };
