@@ -6,8 +6,6 @@ import { TextField } from "@mui/material";
 import fetch from "node-fetch";
 import { Box } from "./box";
 
-//https://github1s.com/jdretz/rapid-api-react-weather-app-tutorial/blob/HEAD/src/components/Forecast/Forecast.js
-
 export const Weather = () => {
   const [input, setInput] = useState("");
   const [weather, setWeather] = useState([]);
