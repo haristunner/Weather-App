@@ -4,12 +4,10 @@
 }
 
 body {
-  background: rgb(34, 193, 195);
-  background: linear-gradient(
-    90deg,
-    rgba(34, 193, 195, 1) 0%,
-    rgba(218, 213, 201, 1) 100%
-  );
+
+  background: linear-gradient(90deg,
+      rgb(195, 98, 34) 0%,
+      rgb(235, 194, 98) 100%);
 }
 
 .weather {
@@ -29,7 +27,7 @@ body {
 input {
   border: none;
   background: local;
-  border-bottom: 2px solid rgb(0, 46, 105);
+  border-bottom: 2px solid rgb(0, 0, 0);
   width: 250px;
   outline: none;
   padding-left: 15px;

@@ -29,6 +29,7 @@ export const Weather = () => {
       .then((res) => res.json())
       .then((response) => {
         setWeather(response);
+        console.log(response)
       })
       .catch((err) => console.error("error:" + err));
   };

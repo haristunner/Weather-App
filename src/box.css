@@ -6,8 +6,9 @@
   text-align: start;
   box-shadow: 0px 3px 15px rgb(44, 44, 44);
   /* margin-top: 150px; */
-  background-color: rgb(128, 190, 202);
+  background-color: rgb(216, 182, 150);
   border-radius: 10px;
+
 }
 
 .celcius {
@@ -16,4 +17,10 @@
   gap: 10px;
   font-size: x-large;
   padding: 30px 20px;
+}
+
+.img {
+  position: relative;
+  left: 75px;
+  color: rgb(78, 119, 119);
 }

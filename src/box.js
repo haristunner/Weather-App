@@ -1,5 +1,6 @@
 import React from "react";
 import "./box.css";
+import { Images } from "./Images"
 
 export const Box = (props) => {
   return (
@@ -14,6 +15,7 @@ export const Box = (props) => {
             Temperature -{" "}
             <strong>{(props.weather.main.temp - 273).toFixed(2)} 'C</strong>
           </p>
+          <Images image={props.weather.weather[0].main} />
         </div>
       ) : null}
     </div>
