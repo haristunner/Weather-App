@@ -15,6 +15,7 @@ export const Box = (props) => {
             Temperature -{" "}
             <strong>{(props.weather.main.temp - 273).toFixed(2)} 'C</strong>
           </p>
+          <p className="description"><strong>{props.weather.weather[0].description}</strong></p>
           <Images image={props.weather.weather[0].main} />
         </div>
       ) : null}

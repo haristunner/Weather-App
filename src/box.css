@@ -8,7 +8,6 @@
   /* margin-top: 150px; */
   background-color: rgb(216, 182, 150);
   border-radius: 10px;
-
 }
 
 .celcius {
@@ -23,4 +22,18 @@
   position: relative;
   left: 75px;
   color: rgb(78, 119, 119);
+}
+
+.description {
+  margin-top: 4px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+p {
+  color: rgb(15, 15, 15)
+}
+
+strong {
+  color: orange;
 }
